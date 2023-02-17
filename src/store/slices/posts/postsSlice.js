@@ -8,7 +8,7 @@ const postsSlice = createSlice({
     extraReducers: {
         [fetchPosts.fulfilled]: (state, {payload}) => {
             return payload
-        },
+        }
     }
 })
 

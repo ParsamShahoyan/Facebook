@@ -7,6 +7,7 @@ import Watching from './components/Watching/Watching'
 import Marketplace from './components/Marketplace/Marketplace'
 import Game from './components/Game/Game'
 import './App.css'
+import Uniq from './components/Uniq/Uniq'
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <Route path='watch' element={<Watching/>} />
         <Route path='market' element={<Marketplace/>} />
         <Route path='game' element={<Game/>} />
+        <Route path='/uniq/:id' element={<Uniq />} />
       </Route>
     </Routes>
   )

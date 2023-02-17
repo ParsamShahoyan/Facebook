@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import fetchPosts from '../../store/slices/posts/postsApi'
 import {selectPosts} from '../../store/slices/posts/postsSlice'
+import News from '../News/News'
 import './stylePost.scss'
 
 const Post = () => {
@@ -14,17 +15,8 @@ const Post = () => {
     }
     }, [])
   return (
-    <div className='news'>
-        <h1>post</h1>
-        <h1>post</h1>
-        <h1>post</h1>
-        <h1>post</h1>
-        <h1>post</h1>
-        <h1>post</h1>
-        <h1>post</h1>
-        <h1>post</h1>
-        <h1>post</h1>
-        <h1>post</h1>
+    <div >
+        {posts.map(post => <News {...post} key={post.id}/>)}
     </div>
   )
 }

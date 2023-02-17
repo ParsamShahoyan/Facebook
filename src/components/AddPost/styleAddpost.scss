@@ -34,16 +34,16 @@
             margin: 15px;
         }
         .bottom{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1.5fr;
-            cursor: pointer;
-            
+            display: flex;
+            align-items: center; 
+            justify-content: center;           
             .live{
                 width: 30px;
+                cursor: pointer;
             }
             p{
                 font-family: sans-serif;
-                // font-size: smaller;
+                margin-right: 10px;
             }
         }
     }

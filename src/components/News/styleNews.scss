@@ -1,0 +1,42 @@
+.news{
+    padding: 10px;
+    margin: 50px auto;
+    max-width: 500px;
+    border: 0;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    p{
+        margin: 15px auto;
+    }
+    .name_post{
+        display: flex;
+        cursor: pointer;
+        h2{
+            margin-left: 8px;
+            position: relative;
+        }
+        span{
+            font-size: small;
+            font-family: sans-serif;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 90px;
+            color: gray;
+        }
+    }
+    img{
+        max-width: 100%; 
+    }
+    span{
+        color: rgb(90, 90, 90);
+        font-family: sans-serif;
+        margin-left: 5px;
+        font-size: 20px;
+    }
+    .like{
+        width: 15px;
+        display: inline-block;
+        margin-top: 15px;
+    }
+}
