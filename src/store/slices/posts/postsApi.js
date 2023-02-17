@@ -10,10 +10,10 @@ const fetchPosts = createAsyncThunk(
             id: post.id.toString(),
             name: post.title.slice(0, post.title.indexOf(' ')),
             postText: post.body.slice(post.title.indexOf(' ') + 1),
-            likesCount: Math.round(Math.random() * 120 + 200),
+            likesCount: [0],
             time: Math.round(Math.random() * 8 + 1),
             img: dataPhoto.filter(photo => photo.id === post.id)
-                        .map(photo => photo.url)
+                    .map(photo => photo.url)
         }))
         // console.log(data)
        return data

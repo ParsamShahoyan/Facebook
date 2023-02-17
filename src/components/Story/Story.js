@@ -15,10 +15,10 @@ const Story = () => {
         </div>
         <hr />
         <div className="slider">
-          <img src={IMAGES.user} alt="" />
-          <img src={IMAGES.user} alt="" />
-          <img src={IMAGES.user} alt="" />
-          <img src={IMAGES.user} alt="" />
+          <img src={IMAGES.st1} alt="" />
+          <img src={IMAGES.st2} alt="" />
+          <img src={IMAGES.st1} alt="" />
+          <img src={IMAGES.st2} alt="" />
         </div>
     </div>
   )

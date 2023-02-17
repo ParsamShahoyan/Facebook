@@ -18,8 +18,8 @@ const Uniq = () => {
           <img style={{width: '50px', borderRadius: '50%'}} src={post?.img} alt="" />
           <h1>{post?.name}</h1>
         </div>
-        <p>{post?.postText}{post?.postText}{post?.postText}</p>
         <img src={post?.img} alt="" />
+        <p>{post?.postText}{post?.postText}{post?.postText}</p>
         <button onClick={() => navigate(-1)}>Back</button>
     </div>
   )

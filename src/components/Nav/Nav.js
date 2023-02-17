@@ -1,13 +1,24 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import IMAGES from '../../images/indexIMG'
 import './styleNav.scss'
+import { useDispatch } from 'react-redux'
+import { addText, selectSearch } from '../../store/slices/search/searchSlice'
+
 const Nav = () => {
+
+  const dispatch = useDispatch()
+  const inputRef = useRef(null)
+  
+  const handleSearch = () => {
+    dispatch(addText(inputRef.current.value))
+  }
+
   return (
     <nav>
         <div className="left">
             <Link to='/'>{<img className='logo' src={IMAGES.logo} alt="" />}</Link>
-            <input className='search' type="text" />
+            <input ref={inputRef} onChange={handleSearch} className='search' type="text" />
         </div>
         <div className="between">
             <NavLink to='/' activeclassname={'active'}>{<img src={IMAGES.home}/>}</NavLink>

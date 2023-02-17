@@ -4,7 +4,17 @@ import fetchPosts from "./postsApi";
 const postsSlice = createSlice({
     name: 'posts',
     initialState: [],
-    reducers: {},
+    reducers: {
+        delPost (state, {payload}) {
+            return [
+                ...state.filter(post => post.id !== payload)
+            ]
+        },
+        countLike (state, {payload}) {
+            const idx = state.findIndex(post => post.id === payload)
+            state[idx].likesCount = 1 
+        } 
+    },
     extraReducers: {
         [fetchPosts.fulfilled]: (state, {payload}) => {
             return payload
@@ -15,6 +25,6 @@ const postsSlice = createSlice({
 
 export const selectPosts = state => state.posts
 
-export const {} = postsSlice.actions
+export const { delPost, countLike } = postsSlice.actions
 
 export const postsReducer = postsSlice.reducer

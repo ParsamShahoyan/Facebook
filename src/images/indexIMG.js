@@ -16,6 +16,8 @@ const IMAGES = {
     image: require('./image.png'),
     smail: require('./smail.png'),
     like: require('./like.png'),
+    st1: require('./st1.png'),
+    st2: require('./st2.png'),
 
 }
 export default IMAGES
