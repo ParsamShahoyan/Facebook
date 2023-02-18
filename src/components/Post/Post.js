@@ -6,6 +6,7 @@ import News from '../News/News'
 import './stylePost.scss'
 import { v4 } from 'uuid'
 import { resetSearch, selectSearch } from '../../store/slices/search/searchSlice'
+import Spiner from '../Spiner/Spiner'
 
  
 const Post = () => {
@@ -34,7 +35,11 @@ const Post = () => {
    }, [posts, search])
   return (
     <>
-        {filteredPosts.map(post => <News {...post} key={v4()}/>)}
+      { 
+        posts.length ?
+        filteredPosts.map(post => <News {...post} key={v4()}/>)
+        : <Spiner/>
+      }
     </>
   )
 }

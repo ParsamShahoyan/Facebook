@@ -32,7 +32,7 @@ const News = ({id, img, likesCount, time, name, postText}) => {
         <p>{postText}</p>
         <img src={img} alt="" />
         <img onClick={handleLike} className='like' src={IMAGES.like} alt="" />
-        <span>{likesCount}</span>
+        <span>{likesCount}</span> 
     </div>
   )
 }
