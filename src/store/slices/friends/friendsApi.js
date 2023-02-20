@@ -1,5 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from 'axios'
+import IMAGES from "../../../images/indexIMG";
 
 const fetchFriends = createAsyncThunk(
     'friends/fetchFriends',
@@ -12,8 +13,12 @@ const fetchFriends = createAsyncThunk(
             email: friend.email,
             city: friend.address.city,
             company: friend.company.name,
-            img: photoData.find(photo => photo.id === friend.id).url
+            friend: false,
+            img: photoData.find(photo => photo.id === friend.id).url,
+            avatar: IMAGES.user
+
         }))
+        // console.log(data)
         return data
     }
 )

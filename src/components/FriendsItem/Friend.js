@@ -1,17 +1,16 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { addFriends, selectCurrentUser } from '../../store/currentUser/currentUserSlice'
+import { useDispatch } from 'react-redux'
+import { addFriends } from '../../store/slices/currentUser/currentUserSlice'
 import { delFriend } from '../../store/slices/friends/friendsSlice'
 import './styleFriend.scss'
 
-const Friend = ({id, name, email, city, img, company}) => {
+const Friend = ({id, name, email, city, img, company, friend, avatar}) => {
 
   const dispatch = useDispatch()
-  const currentUser = useSelector(selectCurrentUser)
-  console.log(currentUser)
   
   const addFriend = () => {
-    dispatch(addFriends({id, name, email, city, img, company}))
+    dispatch(addFriends({id, name, email, city, img, company, friend, avatar}))
+    dispatch(delFriend(id))
   }
 
   const deleteFriend = ()  => {
@@ -22,7 +21,7 @@ const Friend = ({id, name, email, city, img, company}) => {
         <div className="friend">
             <img src={img} alt="" />
             <h2>{name}</h2>
-            <button onClick={addFriend}  onClickCapture={deleteFriend}>Сonfirm</button>
+            <button onClick={addFriend} >Add to friend</button>
             <button onClick={deleteFriend}>Delete</button>
         </div>
     </div>

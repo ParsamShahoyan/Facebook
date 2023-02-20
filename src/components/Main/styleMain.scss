@@ -1,0 +1,47 @@
+.main{
+    margin: 80px auto;
+    border: 0;
+    border-radius: 20px;
+    max-width: 1000px;
+    // background-color: rgb(255, 255, 255);
+    font-family: sans-serif;
+    .main_top{
+        background-color: rgb(255, 255, 255);
+        border: 0;
+        border-radius: 20px;
+        display: grid;
+        padding: 20px;
+        img{
+            width: 200px;
+        }
+    }
+    .main_bootom{
+        max-width: 1000px;
+        margin-top: 50px;
+        justify-content: space-between;
+        display: flex;
+        
+        .friends_cont{
+            border: 0;
+            border-radius: 20px;
+            background-color: rgb(255, 255, 255);
+            max-width: 300px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            align-items: center;
+            text-align: center;
+            .fr{
+                grid-column: 1 / -1;
+            }
+            img{
+                width: 80px;
+                border-radius: 10px;
+            }
+            h3{
+                color: red;
+            }
+        }
+    }
+    
+    
+}

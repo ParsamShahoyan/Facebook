@@ -31,7 +31,7 @@ const Nav = () => {
             <Link>{<img src={IMAGES.menu}/>}</Link>
             <Link>{<img src={IMAGES.massenger}/>}</Link>
             <Link>{<img src={IMAGES.push}/>}</Link>
-            <Link>{<img src={IMAGES.user}/>}</Link>
+            <Link to='main'>{<img src={IMAGES.user}/>}</Link>
         </div>
     </nav>
   )
