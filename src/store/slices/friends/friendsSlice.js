@@ -8,11 +8,9 @@ const friendsSlice = createSlice({
         delFriend(state, {payload}) {
          return  state.filter(friend => friend.id !== payload) 
         },
-        
     },
     extraReducers: {
         [fetchFriends.fulfilled]:  (state, {payload}) => {
-            // console.log(payload)
             return payload
         }
     }

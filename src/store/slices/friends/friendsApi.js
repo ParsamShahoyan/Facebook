@@ -1,24 +1,17 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from 'axios'
-import IMAGES from "../../../images/indexIMG";
 
 const fetchFriends = createAsyncThunk(
     'friends/fetchFriends',
     async function(){
-        const {data : friendsData} = await axios.get('https://jsonplaceholder.typicode.com/users')
-        const {data : photoData} = await axios.get('https://jsonplaceholder.typicode.com/photos?_limit=10')
-        const data = friendsData.map(friend => ({
+        const {data : {data: newData}} = await axios.get('https://reqres.in/api/users?page=2')
+        const data =  newData.map(friend => ({
             id: friend.id.toString(),
-            name: friend.name,
+            name:[friend.first_name, " ", friend.last_name],
             email: friend.email,
-            city: friend.address.city,
-            company: friend.company.name,
             friend: false,
-            img: photoData.find(photo => photo.id === friend.id).url,
-            avatar: IMAGES.user
-
+            img: friend.avatar,
         }))
-        // console.log(data)
         return data
     }
 )

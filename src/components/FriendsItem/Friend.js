@@ -4,12 +4,12 @@ import { addFriends } from '../../store/slices/currentUser/currentUserSlice'
 import { delFriend } from '../../store/slices/friends/friendsSlice'
 import './styleFriend.scss'
 
-const Friend = ({id, name, email, city, img, company, friend, avatar}) => {
+const Friend = ({id, name, email, img, friend}) => {
 
   const dispatch = useDispatch()
   
   const addFriend = () => {
-    dispatch(addFriends({id, name, email, city, img, company, friend, avatar}))
+    dispatch(addFriends({id, name, email,  img, friend}))
     dispatch(delFriend(id))
   }
 

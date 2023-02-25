@@ -13,7 +13,7 @@ const Tester = () => {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchFriends())
-  }, [])
+  },[])
   return (
     <div className='friend_contain'>
       <h1 className='reguest'>You may know them</h1>

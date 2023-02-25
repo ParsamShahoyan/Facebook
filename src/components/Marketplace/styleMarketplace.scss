@@ -1,0 +1,21 @@
+.Marketplace{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 80px ;
+    .product{
+        flex: 1 1 100px;
+        margin: 10px;
+        background-color: #F0F2F5;
+        max-height: 550px;
+        text-align: center;
+        font-family: sans-serif;
+        img{
+            max-width: 250px;
+            max-height: 250px;
+            border-radius: 5px;
+        }
+        p{
+            margin-top: 5px;
+        }
+    }
+}
