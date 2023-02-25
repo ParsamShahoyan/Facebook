@@ -5,6 +5,12 @@ const postsSlice = createSlice({
     name: 'posts',
     initialState: [],
     reducers: {
+        addPost (state, {payload}) {
+            return [
+                payload,
+                ...state
+            ]
+        },
         delPost (state, {payload}) {
             return [
                 ...state.filter(post => post.id !== payload)
@@ -25,6 +31,6 @@ const postsSlice = createSlice({
 
 export const selectPosts = state => state.posts
 
-export const { delPost, countLike } = postsSlice.actions
+export const { delPost, countLike, addPost } = postsSlice.actions
 
 export const postsReducer = postsSlice.reducer

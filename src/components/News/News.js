@@ -19,7 +19,6 @@ const News = ({id, img, likesCount, time, name, postText}) => {
 
   const handleLike = () => {
     dispatch(countLike(id))
-    // console.log(id)
   }
 
   return (
